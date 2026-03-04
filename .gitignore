@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Pytest cache
+.pytest_cache/
+
+# PyCharm
+.idea/
+
+# System files
+.DS_Store
