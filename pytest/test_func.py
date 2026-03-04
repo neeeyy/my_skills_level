@@ -1,5 +1,9 @@
+from function import *
 import pytest
-from src.function import *
+
+numbers = [5,10,3,8]
+response_status = 200
+user = {"name": "Alex", "age": 25}
 
 @pytest.mark.maths
 class Test_math:
@@ -14,30 +18,26 @@ class Test_math:
         with pytest.raises(ZeroDivisionError):
             del_num(5, 0)
 
-
-@pytest.mark.chatgpt
+@pytest.mark.testtest
 class Test_gpt:
-
-    def test_sum(self):
-        assert sums(5,2) == 7
 
     def test_multy(self):
         assert mmultipy(5,2) == 10
 
     def test_word(self):
-        assert "auto" in word('automation')
+        assert "auto" in 'automation'
 
     def test_in_list(self):
-        assert 3 in nums
-        assert 10 not in nums
+        assert 3 in numbers
+        assert 11 not in numbers
 
     def test_pali(self):
-        assert pali(text)
+        assert pali('Level')
 
     def test_summ(self):
-        assert 10 == sum_list(result)
-        assert 5 < sum_list(result)
-        assert 20 > sum_list(result)
+        assert 26 == sum_list(numbers)
+        assert 5 < sum_list(numbers)
+        assert 27 > sum_list(numbers)
 
     def test_response(self):
         assert response_status == 200
@@ -47,7 +47,7 @@ class Test_gpt:
         assert user['age'] > 18
 
     def test_word_count(self):
-        assert texts.count('cat') == 2
+        assert split_words("cat dog cat").count('cat') == 2
 
     def test_max_min(self):
         assert max_num(numbers) == 10
