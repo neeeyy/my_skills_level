@@ -1,7 +1,6 @@
 from Base_class import BasePage
 from selenium.webdriver.common.by import By
 
-
 class PhonePage(BasePage):
 
     def open_profile(self):
